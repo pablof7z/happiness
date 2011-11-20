@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title Happiness
+    = stylesheet_link_tag    "http://twitter.github.com/bootstrap/1.4.0/bootstrap.css"
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .container
+      .content
+        .page-header
+          %h1
+            happiness
+            %small How happiness in the world
+        .page
+          = yield
+      %footer
+        %p
+          &copy; Pablo Fernandez
+          = Time.now.year
